@@ -1,5 +1,7 @@
+import os
 from flask import Flask
 inventoryApp = Flask(__name__)
+app.config.from_object(os.environ['APP_SETTINGS'])
 
 @inventoryApp.route('/')
 def hello():
