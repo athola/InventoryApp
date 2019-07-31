@@ -1,8 +1,13 @@
 import os
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
 inventoryApp = Flask(__name__)
-print(os.getenv('APP_SETTINGS', 'Token Not found'))
 inventoryApp.config.from_object(os.environ['APP_SETTINGS'])
+inventoryApp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(inventoryApp)
+
+from models import Grocery
 
 @inventoryApp.route('/')
 def hello():
