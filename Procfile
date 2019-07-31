@@ -1,2 +1,2 @@
 web: gunicorn inventoryApp:inventoryApp
-web: flask-script inventoryApp:inventoryApp
+web: flask_script inventoryApp:inventoryApp
