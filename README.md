@@ -68,6 +68,8 @@ Run migrations created to migrate staging database using:
 <b>pipenv run heroku run python manage.py db upgrade --app inventory-app-stage</b>
 
 Do same for production server:
+<b>heroku config --app inventory-app-pro</b>
+
 <b>heroku addons:create heroku-postgresql:hobby-dev --app inventory-app-pro</b>
 
 <b>git push pro master</b>
