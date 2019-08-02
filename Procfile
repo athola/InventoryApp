@@ -1,2 +1,2 @@
 web: gunicorn inventoryApp:inventoryApp
-web: flask_script inventoryApp:inventoryApp
+web: python manage.py runserver --host 0.0.0.0 --port ${PORT}
